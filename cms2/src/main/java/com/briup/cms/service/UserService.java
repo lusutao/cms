@@ -4,6 +4,7 @@ import com.briup.cms.bean.User;
 import com.briup.cms.exception.ServiceException;
 import org.springframework.data.domain.Page;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface UserService {
 	void updateUserStatus(Long id,String status)throws ServiceException;
 	
 	//登录
-	User login(User user, HttpServletResponse httpServletResponse)throws ServiceException;
+	User login(User user, HttpServletResponse httpServletResponse, HttpServletRequest request)throws ServiceException;
 	//根据用户名获取用户信息
 	User findUserByUsername(String username)throws ServiceException;
 	

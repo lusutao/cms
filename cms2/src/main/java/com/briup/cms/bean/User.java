@@ -2,6 +2,7 @@ package com.briup.cms.bean;
 
 import com.briup.cms.util.DateJsonSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -62,6 +63,11 @@ public class User implements Serializable{
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date registerTime;
 
+	/**
+	 * 验证码
+	 */
+//	@ApiModelProperty()
+	private String code;
 //	/**
 //	 * 账号是否可用
 //	 */
